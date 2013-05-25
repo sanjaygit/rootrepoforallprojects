@@ -1,0 +1,133 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/jdbc 
+        http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+        http://www.springframework.org/schema/batch
+		http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">      
+         
+	<context:component-scan base-package="com.transience.sandbox" />
+	<mvc:annotation-driven conversion-service="conversionService"/>
+	<tx:annotation-driven />
+ 
+ 	<mvc:resources mapping="/static_resources/**" location="/static_resources/" />
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+        <list>
+            <bean class="com.transience.sandbox.converters.StringToCurrencyConverter"/>
+        </list>
+    </property> 
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/pages/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean> 
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="emf"/>
+    </bean>
+    
+	<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="jpaVendorAdapter"> <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" /></property>
+        <property name="packagesToScan" value="com.transience.sandbox.domain"/>
+        
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				<prop key="hibernate.max_fetch_depth">3</prop>
+				<prop key="hibernate.jdbc.fetch_size">50</prop>
+				<prop key="hibernate.jdbc.batch_size">10</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>        
+		</property>
+    </bean>
+    
+<!--     <bean id="currencyRepository" class="com.transience.sandbox.repositories.CurrencyRepository" />     -->
+	
+	<jee:jndi-lookup id="dataSource" jndi-name="oracleXEDS"/>
+	<jpa:repositories base-package="com.transience.sandbox" entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
+	
+	
+	
+	<!--  For the batch job of importing expenses -->
+
+	<bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher" 
+		p:jobRepository-ref="jobRepository" p:taskExecutor-ref="taskExecutor" />
+
+	<!-- 4.3. Configuring a JobLauncher asynchronously -->
+	<bean id="taskExecutor" class="org.springframework.core.task.SimpleAsyncTaskExecutor" />
+	
+	<!-- http://forum.springsource.org/showthread.php?59779-Spring-Batch-1-1-2-Standard-JPA-does-not-support-custom-isolation-levels-use-a-sp -->
+	<batch:job-repository id="jobRepository"
+		xmlns="http://www.springframework.org/schema/batch" data-source="dataSource"
+		isolation-level-for-create="DEFAULT" transaction-manager="transactionManager"/>
+		
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" p:dataSource-ref="dataSource" />
+	<bean id="expenseWriter" class="com.transience.sandbox.batch.ExpenseItemWriter" />
+
+	<!-- Job Configuration -->
+	<batch:job id="expenseImportJob" xmlns="http://www.springframework.org/schema/batch">
+		<batch:step id="expenseLoad1">
+			<batch:tasklet>
+				<batch:chunk reader="expenseFileItemReader" writer="expenseWriter" commit-interval="2" />
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+
+	<bean id="expenseFileItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+		<property name="resource" value="classpath:expenses.csv" />
+		<property name="lineMapper">
+			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+				<property name="lineTokenizer">
+					<bean
+						class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+						<property name="names" value="amount,description,currency" />
+					</bean>
+				</property>
+				<property name="fieldSetMapper">
+					<bean class="com.transience.sandbox.batch.ExpenseFieldSetMapper" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- End batch job -->
+	
+	<!-- For File upload -->			
+<!--  		<bean class="org.springframework.web.multipart.support.StandardServletMultipartResolver" id="multipartResolver" /> -->
+ 			
+ 
+ 		
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<property name="maxUploadSize" value="100000" />
+</bean>
+
+	<!-- end file upload -->
+</beans>
