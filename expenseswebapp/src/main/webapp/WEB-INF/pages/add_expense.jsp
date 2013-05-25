@@ -25,19 +25,22 @@
 <tbody>
 <tr>
 <td>Amount</td>
-<td><input type="text" name="amount" id="amount_formfield" /></td>
+<td><form:input path="amount" type="text" name="amount" id="amount_formfield" /></td>
 </tr>
 <tr>
 <td>Tags</td>
-<td><input type="text" name="tagsString" id="tags_formfield" /></td>
+<td><form:input path="tags" type="text" name="tags" id="tags_formfield" /></td>
 </tr>
 <tr>
 <td>Description</td>
-<td><input type="text" name="description" id="description_formfield" /></td>
+<td>
+	<form:input path="description" type="text" name="description" id="description_formfield" />
+	<span><form:errors path="description"/></span>
+</td>
 </tr>
 <tr>
 <td>Date</td>
-<td><input type="text" name="date" id="date_formfield" /></td>
+<td><form:input path="date" type="text" name="date" id="date_formfield" /></td>
 </tr>
 <tr>
 <td><input type="submit" name="submit" id="submit_formfield" /></td>
