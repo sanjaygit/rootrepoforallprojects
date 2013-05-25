@@ -19,7 +19,7 @@
 <div id="form_container">
 
 <h3>Add an expense -- <fmt:formatDate type="time" value="${now}" /></h3>
-<!--  
+
 <form:form modelAttribute="expense" name="add_expense_form" method="post" id="addExpenseForm" action="addExpenses">
 <table>
 <tbody>
@@ -51,7 +51,7 @@
 </table>
 </form:form>
 </div>
- -->
+
 <hr/>
 
 <div id="fileUploadContainer">

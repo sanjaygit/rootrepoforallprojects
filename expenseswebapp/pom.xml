@@ -166,7 +166,7 @@
             		
   </dependencies>
   <build>
-    <finalName>HelloWorldWebapp</finalName>
+    <finalName>ExpensesWebapp</finalName>
 	<plugins> 
 			<plugin>
 				<groupId>com.oracle.weblogic</groupId>
