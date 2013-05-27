@@ -16,6 +16,7 @@ public class StringToTagsConverter implements Converter<String, List<Tag>>{
 	ITagService tagService;
 
 	public List<Tag> convert(String stringOfTags) {
+		
 		List<Tag> tags = new ArrayList<Tag>();
 		Iterable<String> tagsString = Splitter.on(',').split(stringOfTags);
 		for(String tagName : tagsString) {

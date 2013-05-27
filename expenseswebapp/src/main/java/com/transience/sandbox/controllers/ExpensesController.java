@@ -55,16 +55,31 @@ public class ExpensesController {
 	@Autowired
 	ITagService tagService;
 	
+	@RequestMapping(value = "testConverters", method = RequestMethod.GET)
+	public ModelAndView testConverters(@RequestParam Currency currency, @RequestParam java.util.Date date, @RequestParam List<Tag> tags) {		
+		ModelAndView mav = new ModelAndView("success");
+		logger.info("Attempting to convert tags, date and currency...");
+		logger.info("Date is: [" + date + "]");		
+		logger.info("Currency id is: " + currency.getId());
+		for(Tag tag : tags) {
+			logger.info("Tag obtained is: " + tag.getTagName());
+		}
+		//return Long.toString(currency.getId());
+		return mav;    
+	}	
+	
 	@RequestMapping(value = "showAddExpense", method = RequestMethod.GET)
 	public ModelAndView showAddExpense() {		
-		ModelAndView mav = new ModelAndView("add_expense");		
+		ModelAndView mav = new ModelAndView("add_expense");
+		mav.addObject("expense", new Expense());
 		return mav;    
 	}	
 	
 	@RequestMapping(value = "addExpenses", method = RequestMethod.POST)
-	public ModelAndView addExpense(Expense expense, HttpServletRequest request, BindingResult bindingResult, Model uiModel, RedirectAttributes redirectAttributes) {
+	public ModelAndView addExpense(@ModelAttribute Expense expense, HttpServletRequest request, BindingResult bindingResult) {
+		logger.info("");
 		expenseService.addExpense(expense);
-		ModelAndView mav = new ModelAndView("add_expense_success");
+		ModelAndView mav = new ModelAndView("success");
 		return mav;
 	}
 	

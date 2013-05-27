@@ -180,9 +180,10 @@
 					<middlewareHome>D:/weblogic12.1.1_OEPE_Coherence/Middleware</middlewareHome>
 					<weblogicHome>wlserver_12.1</weblogicHome>
 					<domainHome>D:/weblogic12.1.1_OEPE_Coherence/Middleware/user_projects/domains/comprehensiveappdomain</domainHome>
-					<adminurl>t3://localhost:7001</adminurl>
+					<adminurl>t3://localhost:7001</adminurl>					
 				</configuration>
 				<executions>
+					
 					<execution>
 						<id>RM-WAR</id>
 						<phase>install</phase>
@@ -190,6 +191,7 @@
 							<goal>undeploy</goal>
 						</goals>
 					</execution>
+					 
 					<execution>
 						<id>WLS-SETUP</id>
 						<phase>install</phase>
@@ -197,6 +199,7 @@
 							<goal>deploy</goal>
 						</goals>
 					</execution>
+					
 				</executions>
 			</plugin>
 	</plugins>  

@@ -40,7 +40,7 @@
 </tr>
 <tr>
 <td>Date</td>
-<td><form:input path="date" type="text" name="date" id="date_formfield" /></td>
+<td><form:input path="expenseDate" type="text" name="expenseDate" id="date_formfield" /></td>
 </tr>
 <tr>
 <td><input type="submit" name="submit" id="submit_formfield" /></td>

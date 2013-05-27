@@ -41,7 +41,7 @@ public class TagServiceImpl implements ITagService {
 			logger.info("The EXCEPTION SHOULD THROWN NOW");
 		} catch(Exception e) {
 			logger.info("Exception thrown");
-			//e.printStackTrace();
+			e.printStackTrace();
 		}
 		return tag;
 	}
