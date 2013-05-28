@@ -14,12 +14,19 @@
 	<title>Add Expense</title>
 	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="${contextPath}/static_resources/css/common.css" />
 	
 	<script type="javascript">
 		function doAjaxPost() {
 			alert('In ajaxpost!');
-		}
+		}		
+	</script>
+	 <script>
+			$(function() {
+			$( "#expenseDate_formfield" ).datepicker();
+			});
 	</script>
 </head>
 <body>
@@ -49,7 +56,7 @@
 </tr>
 <tr>
 <td>Date</td>
-<td><form:input path="expenseDate" type="text" name="expenseDate" id="date_formfield" /></td>
+<td><form:input path="expenseDate" type="text" name="expenseDate" id="expenseDate_formfield" /></td>
 </tr>
 <tr>
 <td><input type="submit" name="submit" id="submit_formfield" /><input type="button" name="doAdjaxPost" onclick="doAjaxPost()" /></td>
