@@ -3,10 +3,11 @@ package com.transience.sandbox.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import com.google.common.base.Splitter;
+//import com.google.common.base.Splitter;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
+import java.util.Collection;
+//import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

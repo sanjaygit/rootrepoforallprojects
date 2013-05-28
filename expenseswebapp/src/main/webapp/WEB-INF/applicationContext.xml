@@ -31,12 +31,12 @@
 	<tx:annotation-driven />
  
  	<mvc:resources mapping="/static_resources/**" location="/static_resources/" />
-	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
 		<property name="converters">
         <list>
             <bean class="com.transience.sandbox.converters.StringToCurrencyConverter"/>
             <bean class="com.transience.sandbox.converters.StringToDateConverter"/>
-            <bean class="com.transience.sandbox.converters.StringToTagsConverter"/>
+            <bean class="com.transience.sandbox.converters.StringToTaggConverter"/>
         </list>
     </property> 
 	</bean>

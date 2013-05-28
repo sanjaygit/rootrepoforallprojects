@@ -23,6 +23,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,7 +35,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import au.com.bytecode.opencsv.CSVReader;
 
-import com.google.common.base.Splitter;
+//import com.google.common.base.Splitter;
 import com.transience.sandbox.commandobjects.FileUploadCommand;
 import com.transience.sandbox.commandobjects.LoginFormCommand;
 import com.transience.sandbox.domain.Currency;
@@ -141,7 +143,8 @@ public class ExpensesController {
 						// @TODO refactor into criteria queries
 						List<Tag> tags = new ArrayList<Tag>();
 						logger.info("About to split the string: " + nextLine[3]);
-						Iterable<String> tagsString = Splitter.on(';').split(nextLine[3]);
+						//Iterable<String> tagsString = Splitter.on(';').split(nextLine[3]);
+						String[] tagsString = nextLine[3].split(";");
 						logger.info("String splitting has not failed...");
 						for(String tagName : tagsString) {
 							logger.info("Searching for Tag with name: >" + tagName + "<");
@@ -177,4 +180,5 @@ public class ExpensesController {
 		ModelAndView mav = new ModelAndView("expense_upload_success");
 		return mav;
 	}
+	
 }

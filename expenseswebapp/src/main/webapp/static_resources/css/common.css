@@ -1,4 +1,3 @@
-@CHARSET "ISO-8859-1";
 body, html {
 	margin:0;
 	padding:0;
@@ -297,4 +296,3 @@ span.top_nav_menuitem:hover {
 	border-width: 1px;
 	border-color: red;
 }
-
