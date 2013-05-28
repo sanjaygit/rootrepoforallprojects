@@ -18,6 +18,14 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="${contextPath}/static_resources/css/common.css" />
 	
+	<!-- For autocomplete -->
+		<link rel="stylesheet" href="${contextPath}/static_resources/fbautocomplete/test.css" type="text/css" media="screen" title="Test Stylesheet" charset="utf-8" />    
+<%-- 	    <script src="${contextPath}/static_resources/fbautocomplete/mootools-beta-1.2b1.js" type="text/javascript" charset="utf-8"></script> --%>
+<!-- 	    <script src="textboxlist.js" type="text/javascript" charset="utf-8"></script> -->
+<%-- 	    <script src="${contextPath}/static_resources/fbautocomplete/textboxlist.compressed.js" type="text/javascript" charset="utf-8"></script> --%>
+<%-- 	    <script src="${contextPath}/static_resources/fbautocomplete/test.js" type="text/javascript" charset="utf-8"></script>	 --%>
+	<!-- end autocomplete -->
+	
 	<script type="javascript">
 		function doAjaxPost() {
 			alert('In ajaxpost!');
@@ -27,6 +35,50 @@
 			$(function() {
 			$( "#expenseDate_formfield" ).datepicker();
 			});
+	</script>
+
+	<script>
+	
+	function split(val) {
+	    return val.split(/,\s*/);
+	}
+	function extractLast(term) {
+    	return split(term).pop();
+	}
+
+	$(document).ready(function() {
+		
+			$( "#tags_formfield").autocomplete({
+	        source: function (request, response) {
+	            $.getJSON("${pageContext. request. contextPath}/expenses/getAllTagNamesJSON", {
+	                term: extractLast(request.term)
+	            }, response);
+	        },
+	        search: function () {
+	            // custom minLength
+	            var term = extractLast(this.value);
+	            if (term.length < 1) {
+	                return false;
+	            }
+	        },
+	        focus: function () {
+	            // prevent value inserted on focus
+	            return false;
+	        },
+	        select: function (event, ui) {
+	            var terms = split(this.value);
+	            // remove the current input
+	            terms.pop();
+	            // add the selected item
+	            terms.push(ui.item.value);
+	            // add placeholder to get the comma-and-space at the end
+	            terms.push("");
+	            this.value = terms.join(", ");
+	            return false;
+	        }
+	    });
+    
+	})
 	</script>
 </head>
 <body>

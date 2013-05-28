@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -56,6 +57,17 @@ public class ExpensesController {
 	ICurrencyService currencyService;
 	@Autowired
 	ITagService tagService;
+	
+
+	@RequestMapping(value="getAllTagNamesJSON", method=RequestMethod.GET)
+	public @ResponseBody List<String> getAllTagNamesJSON(@RequestParam("term") String term) {
+		Collection<Tag> tags = tagService.findTagsWithNameLike(term);
+		List<String> tagNames = new ArrayList<String>();
+		for(Tag tag : tags) {
+			tagNames.add(tag.getTagName());
+		}
+		return tagNames;
+	}
 	
 	@RequestMapping(value = "testConverters", method = RequestMethod.GET)
 	public ModelAndView testConverters(@RequestParam Currency currency, @RequestParam java.util.Date date, @RequestParam List<Tag> tags) {		
@@ -180,5 +192,7 @@ public class ExpensesController {
 		ModelAndView mav = new ModelAndView("expense_upload_success");
 		return mav;
 	}
+	
+	
 	
 }
