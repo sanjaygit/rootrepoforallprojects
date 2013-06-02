@@ -14,10 +14,49 @@
 	<title>Add Expense</title>
 	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
- 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>	
+ 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ 	
+ 	
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="${contextPath}/static_resources/css/common.css" />
 	
+	<!-- include highcharts after jQuery -->
+ 	<script src="http://code.highcharts.com/highcharts.js"></script>
+ 	<script type="text/javascript">
+ 		$(document).ready(function() {
+ 			var chart = new Highcharts.Chart({
+ 				chart: {
+ 					renderTo: 'chartContainer',
+ 					type: 'column',
+ 					border: 1
+ 				},
+ 				title: {
+ 					text: 'Number of patents granted'
+ 				},
+ 				subtitle: {
+ 					text: 'From 2008 to present'
+ 				},
+ 				xAxis: {
+ 					categories: ['2001', '2002', '2003'],
+ 					tickInterval: 1
+ 				},
+ 				yAxis: {
+ 					title: {
+ 						text: 'Number of patents'
+ 					} 					
+ 				},
+ 				series: [
+ 				    {
+ 						name: 'UK',
+ 						data: [4351, 4190, 4028] 					
+ 					}
+ 				]
+ 				
+ 				
+ 			})
+ 		})
+ 	</script>
+ 	
 	<!-- For autocomplete -->
 <%-- 		<link rel="stylesheet" href="${contextPath}/static_resources/fbautocomplete/test.css" type="text/css" media="screen" title="Test Stylesheet" charset="utf-8" />     --%>
 <%-- 	    <script src="${contextPath}/static_resources/fbautocomplete/mootools-beta-1.2b1.js" type="text/javascript" charset="utf-8"></script> --%>
@@ -138,7 +177,9 @@
     
 // 	})
 	</script>
+
 </head>
+
 <body>
 
 <jsp:useBean id="now" class="java.util.Date" />
@@ -177,7 +218,10 @@
 	<td><a href="${contextPath}/expenseImport">Go to People List</a></td>
 	</tr>
 	<tr>
-		<td colspan="2"><div id="ajaxResponse"></div></td>
+		<td colspan="1"><div id="ajaxResponse"></div></td>
+		<td>
+			<div id="chartContainer"></div>
+		</td>
 	</tr>
 	</tbody>
 	</table>

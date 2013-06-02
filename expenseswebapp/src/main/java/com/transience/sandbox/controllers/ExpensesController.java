@@ -157,6 +157,8 @@ public class ExpensesController {
 					String[] nextLine;
 					
 					while((nextLine = reader.readNext()) != null) {		
+						
+						// {amount, description, currency, tags, date}
 						Expense expense = new Expense();
 						expense.setAmount(new BigDecimal(nextLine[0]));
 						expense.setDescription(nextLine[1]);						
