@@ -19,6 +19,7 @@ public class StringToTaggConverter implements Converter<String, Tag>{
 	protected final Log logger = LogFactory.getLog(getClass());
 
 	public Tag convert(String stringOfTagNames) {
+		logger.info("String passed to TagConverter is: " + stringOfTagNames);
 		
 		//List<Tag> tags = null;
 		
@@ -26,7 +27,11 @@ public class StringToTaggConverter implements Converter<String, Tag>{
 		//logger.info("Looping through tagNames now...");
 		//for(String tagName : tagNames) {
 			//logger.info("tag name: " + tagName);
-			Tag tag = tagService.findByTagName(stringOfTagNames);
+		
+			// No need to search by name now...id is getting passed, after implementing autocomplete
+			// Tag tag = tagService.findByTagName(stringOfTagNames);
+		
+				Tag tag = tagService.findById(Long.parseLong(stringOfTagNames));
 			//tags.add(tag);
 		//}
 		

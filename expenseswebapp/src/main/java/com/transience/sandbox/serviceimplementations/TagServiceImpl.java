@@ -28,6 +28,7 @@ public class TagServiceImpl implements ITagService {
 	private static final String QUERY_FINDTAGBYTAGNAME = "select t from Tag t where t.tagName = :tagName";
 	private static final String QUERY_FINDALLTAGS = "select t from Tag t";
 	private static final String QUERY_FINDALLTAGSWITHNAMELIKE = "select t from Tag t where t.tagName like :tagName";
+	private static final String QUERY_FINDTAGBYTAGID = "select t from Tag t where t.id = :id";
 	
 	//@Autowired
 	//private TagRepository tagRepository;
@@ -56,14 +57,15 @@ public class TagServiceImpl implements ITagService {
 	}
 
 	public List<Tag> findAll() {
-		return em.createQuery(QUERY_FINDALLTAGS, Tag.class).getResultList();
-				
+		return em.createQuery(QUERY_FINDALLTAGS, Tag.class).getResultList();				
 	}
 
 	public Collection<Tag> findTagsWithNameLike(String namePattern) {
 		return em.createQuery(QUERY_FINDALLTAGSWITHNAMELIKE, Tag.class).setParameter("tagName", namePattern + "%").getResultList();
 	}
-	
-	
 
+	public Tag findById(long id) {
+		return em.createQuery(QUERY_FINDTAGBYTAGID, Tag.class) .setParameter("id", id).getSingleResult();
+	}
+	
 }

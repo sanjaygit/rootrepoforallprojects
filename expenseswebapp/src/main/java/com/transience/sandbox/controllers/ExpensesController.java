@@ -43,6 +43,7 @@ import com.transience.sandbox.domain.Currency;
 import com.transience.sandbox.domain.Expense;
 import com.transience.sandbox.domain.Tag;
 import com.transience.sandbox.services.*;
+import com.transience.sandbox.ui.AutoCompleteModel;
 
 
 @Controller
@@ -60,12 +61,16 @@ public class ExpensesController {
 	
 
 	@RequestMapping(value="getAllTagNamesJSON", method=RequestMethod.GET)
-	public @ResponseBody List<String> getAllTagNamesJSON(@RequestParam("term") String term) {
+	public @ResponseBody List<AutoCompleteModel> getAllTagNamesJSON(@RequestParam("q") String term) {
 		Collection<Tag> tags = tagService.findTagsWithNameLike(term);
-		List<String> tagNames = new ArrayList<String>();
+		List<AutoCompleteModel> tagNames = new ArrayList<AutoCompleteModel>();
 		for(Tag tag : tags) {
-			tagNames.add(tag.getTagName());
+			AutoCompleteModel tagModel = new AutoCompleteModel();
+			tagModel.setId(String.valueOf(tag.getId()));
+			tagModel.setName(tag.getTagName());
+			tagNames.add(tagModel);
 		}
+		
 		return tagNames;
 	}
 	

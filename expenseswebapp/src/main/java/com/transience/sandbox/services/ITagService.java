@@ -9,6 +9,8 @@ public interface ITagService {
 
 	public Tag findByTagName(String tagName);
 	
+	public Tag findById(long id);
+	
 	public Collection<Tag> findTagsWithNameLike(String namePattern);
 	
 	public Tag createTag(Tag tag);
