@@ -37,7 +37,20 @@
 	
 	 <script>
 		$(function() {
-			$( "#expenseDate_formfield" ).datepicker();
+			$( "#expenseDate_formfield" ).datepicker(
+				{
+					showOn: "button",
+					buttonImage: "${pageContext. request. contextPath}/static_resources/images/calendar.gif",
+					buttonImageOnly: true,
+					dateFormat: "mm/dd/yy"
+				})
+		});
+		 $(function() {
+			$( "input[type=submit], a, button" )
+			.button()
+			.click(function( event ) {
+				//event.preventDefault();
+			});
 		});
 	</script>
 	<script type="text/javascript">
@@ -48,6 +61,39 @@
     				preventDuplicates: true
     			});
 		});
+		
+		function addExpenseViaPOST(form) {
+			alert("In post form");
+			$('#addExpenseForm').submit();
+		}
+		
+		function addExpenseViaAjax() {
+			//alert("Function addExpenseViaAjax called");
+			var amount = $('#amount_formfield').val();
+			//alert('Amount: ' + $('#amount_formfield').val);
+			var description = $('#description_formfield').val(); 
+			var tags = $('#tags_formfield').val();
+			var expenseDate = $('#expenseDate_formfield').val();
+			//alert('Date: ' + $('#expenseDate_formfield')).val;
+			
+			$.ajax({
+		        type: "POST",
+		        url: "${pageContext. request. contextPath}/expenses/addExpensesAjax",
+		        data: "amount=" + amount + "&description=" + description + "&tags=" + tags + "&expenseDate=" + expenseDate,
+		        success: function(response){
+		        	// we have the response
+		        	alert('Success: ' + response);
+		        	$('#ajaxResponse').html(response);
+			        //$('#info').html(response);
+			        //$('#name').val('');
+		    	    //$('#education').val('');
+		        },
+		        error: function(e){
+			        alert('Error: ' + e);
+		        }
+        	});
+        
+		}
 	</script>
 	
 	<script>
@@ -123,12 +169,15 @@
 	<td><form:input path="expenseDate" type="text" name="expenseDate" id="expenseDate_formfield" /></td>
 	</tr>
 	<tr>
-	<td><input type="submit" name="submit" id="submit_formfield" /><input type="button" name="doAdjaxPost"/></td>
+	<td><input type="submit" name="submit" id="submit_formfield" onclick="addExpenseViaPOST(this)"/><input type="button" value="Add expense via ajax!" name="doAdjaxPost" onclick="addExpenseViaAjax()"/></td>
 	<td></td>
 	</tr>
 	<tr>
 	<td><input type="hidden" name="currency" value="INR" /></td>
 	<td><a href="${contextPath}/expenseImport">Go to People List</a></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div id="ajaxResponse"></div></td>
 	</tr>
 	</tbody>
 	</table>

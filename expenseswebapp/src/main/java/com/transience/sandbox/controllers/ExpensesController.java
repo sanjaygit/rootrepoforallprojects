@@ -102,6 +102,14 @@ public class ExpensesController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "addExpensesAjax", method = RequestMethod.POST)
+	public @ResponseBody String addExpenseAjax(@ModelAttribute Expense expense, HttpServletRequest request, BindingResult bindingResult) {
+		logger.info("");
+		Expense savedExpense = expenseService.addExpense(expense);
+		//ModelAndView mav = new ModelAndView("success");
+		return "Added expense, generated expenseID is: " + savedExpense.getId();
+	}	
+	
 	@RequestMapping(value="uploadFile", method=RequestMethod.POST )
 	public ModelAndView uploadExpenseFile(HttpServletRequest request, @ModelAttribute("uploadForm") FileUploadCommand uploadForm, Model map)
 	{		

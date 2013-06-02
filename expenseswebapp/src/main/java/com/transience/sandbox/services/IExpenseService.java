@@ -4,6 +4,6 @@ import java.util.*;
 
 public interface IExpenseService {
 	
-	public void addExpense(Expense expense);
+	public Expense addExpense(Expense expense);
 
 }

@@ -18,13 +18,17 @@ public class ExpenseServiceImplementation implements IExpenseService {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public void addExpense(Expense expense) {
+	public Expense addExpense(Expense expense) {
+		
+		return em.merge(expense);
+		/*
 		// TODO Auto-generated method stub
 		if((Long)expense.getId() == null) {
 			em.persist(expense);			
 		} else {
 			em.merge(expense);
 		}
+		*/
 
 	}
 
