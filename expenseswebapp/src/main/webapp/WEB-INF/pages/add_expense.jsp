@@ -100,7 +100,6 @@
 
 <h3>Add an expense -- <fmt:formatDate type="time" value="${now}" /></h3>
 
-<div id="#form_container">
 	<form:form modelAttribute="expense" name="add_expense_form" method="post" id="addExpenseForm" action="addExpenses">
 	<table>
 	<tbody>
