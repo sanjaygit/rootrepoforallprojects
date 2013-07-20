@@ -5,5 +5,6 @@ import java.util.*;
 public interface IExpenseService {
 	
 	public Expense addExpense(Expense expense);
+	public void addAllExpenses(List<Expense> expenses);
 
 }

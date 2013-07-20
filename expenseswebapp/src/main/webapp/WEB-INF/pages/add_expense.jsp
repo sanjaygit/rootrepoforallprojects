@@ -23,38 +23,66 @@
 	<!-- include highcharts after jQuery -->
  	<script src="http://code.highcharts.com/highcharts.js"></script>
  	<script type="text/javascript">
- 		$(document).ready(function() {
- 			var chart = new Highcharts.Chart({
- 				chart: {
- 					renderTo: 'chartContainer',
- 					type: 'column',
- 					border: 1
- 				},
- 				title: {
- 					text: 'Number of patents granted'
- 				},
- 				subtitle: {
- 					text: 'From 2008 to present'
- 				},
- 				xAxis: {
- 					categories: ['2001', '2002', '2003'],
- 					tickInterval: 1
- 				},
- 				yAxis: {
+ 	
+ 			var options = {
+ 					chart: {
+ 						renderTo: 'chartContainer',
+ 						type: 'column',
+ 						border: 1
+ 					},
  					title: {
- 						text: 'Number of patents'
- 					} 					
- 				},
- 				series: [
- 				    {
- 						name: 'UK',
- 						data: [4351, 4190, 4028] 					
- 					}
- 				]
+ 						text: 'Expenses by tag'
+ 					},
+ 					subtitle: {
+ 						text: 'In OZ'
+ 					},
+ 					xAxis: {
+ 						categories: []
+ 					},
+ 					yAxis: {
+ 						text: 'Expenses'
+ 					},
+ 					series: []
+ 					
+ 			};
+ 	
+ 		
+//  		$(document).ready(function() {
+//  			var chart = new Highcharts.Chart({
+//  				chart: {
+//  					renderTo: 'chartContainer',
+//  					type: 'column',
+//  					border: 1
+//  				},
+//  				title: {
+//  					text: 'Number of patents granted'
+//  				},
+//  				subtitle: {
+//  					text: 'From 2008 to present'
+//  				},
+//  				xAxis: {
+//  					categories: ['2001', '2002', '2003'],
+//  					tickInterval: 1
+//  				},
+//  				yAxis: {
+//  					title: {
+//  						text: 'Number of patents'
+//  					} 					
+//  				},
+//  				series: [
+//  				    {
+//  						name: 'UK',
+//  						data: [4351, 4190, 4028] 					
+//  					},
+//  				    {
+//  						name: 'INDIA',
+//  						data: [7000, 8000, 9000] 					
+//  					}
+//  				]
  				
  				
- 			})
- 		})
+//  			})
+//  		})
  	</script>
  	
 	<!-- For autocomplete -->

@@ -39,6 +39,7 @@ import au.com.bytecode.opencsv.CSVReader;
 //import com.google.common.base.Splitter;
 import com.transience.sandbox.commandobjects.FileUploadCommand;
 import com.transience.sandbox.commandobjects.LoginFormCommand;
+import com.transience.sandbox.csvimport.BaseCSVParser;
 import com.transience.sandbox.domain.Currency;
 import com.transience.sandbox.domain.Expense;
 import com.transience.sandbox.domain.Tag;
@@ -88,7 +89,8 @@ public class ExpensesController {
 	}	
 	
 	@RequestMapping(value = "showAddExpense", method = RequestMethod.GET)
-	public ModelAndView showAddExpense() {		
+	public ModelAndView showAddExpense() {
+		logger.info("* * *showAddExpense method called");
 		ModelAndView mav = new ModelAndView("add_expense");
 		mav.addObject("expense", new Expense());
 		return mav;    
@@ -104,7 +106,7 @@ public class ExpensesController {
 	
 	@RequestMapping(value = "addExpensesAjax", method = RequestMethod.POST)
 	public @ResponseBody String addExpenseAjax(@ModelAttribute Expense expense, HttpServletRequest request, BindingResult bindingResult) {
-		logger.info("");
+		logger.info("Adding expense via ajax call...");
 		Expense savedExpense = expenseService.addExpense(expense);
 		//ModelAndView mav = new ModelAndView("success");
 		return "Added expense, generated expenseID is: " + savedExpense.getId();
@@ -114,93 +116,37 @@ public class ExpensesController {
 	public ModelAndView uploadExpenseFile(HttpServletRequest request, @ModelAttribute("uploadForm") FileUploadCommand uploadForm, Model map)
 	{		
 		logger.info("Castinig command to FileUploadCommand");
+		logger.info("* * * * * * * * currencyService here is: " + currencyService);
 		//FileUploadCommand fileUploadCommand = (FileUploadCommand) command;
 		//let's see if there's content there
         MultipartFile file = uploadForm.getFile();
         logger.info("fileBean is: " + file);
-        //if (file == null) {
-             // hmm, that's strange, the user did not upload anything
-        //}
-		
-//		logger.info("Trying to parse from request...");
-//		System.out.println("Trying to parse from request...");
-//		Collection<Part> parts = null;
-//		try {
-//			parts = request.getParts();
-//			for (Part part : parts) {
-//				logger.info("Name:");
-//				logger.info(part.getName());
-//				logger.info("Header: ");
-//				for (String headerName : part.getHeaderNames()) {
-//					logger.info(headerName);
-//					logger.info(part.getHeader(headerName));
-//				}
-//				logger.info("Size: ");
-//				logger.info(part.getSize());
-//				part.write(part.getName() + "-down");
-//			}
-//		} catch(Exception e) {
-//			e.printStackTrace();
-//		}
-		
 		 
-		if(file != null) {
-			byte[] fileContent = null;
+		if(file != null) {			
+			List<Expense> expensesToBeAdded = new ArrayList<Expense>();
+			InputStream inputStream = null;
 			try {
-				InputStream inputStream = file.getInputStream();
+				inputStream = file.getInputStream();
 				if(inputStream == null) {
 					System.out.println("*** File input stream is null");					
 				} else {
 					logger.info("Input stream was not null, attempting CSV parse now...");
-					// Parsing using csvReader now...
-					CSVReader reader = new CSVReader(new InputStreamReader(inputStream), ',', '"', 1);
-					String[] nextLine;
-					
-					while((nextLine = reader.readNext()) != null) {		
-						
-						// {amount, description, currency, tags, date}
-						Expense expense = new Expense();
-						expense.setAmount(new BigDecimal(nextLine[0]));
-						expense.setDescription(nextLine[1]);						
-						Currency currency = currencyService.findByCurrencyName(nextLine[2]);
-						logger.info("Currency identified by ID in csv file is: " + currency.getCurrencyName());
-						expense.setCurrency(currency);
-						expense.setTagsString(nextLine[3]);
-						//Now take the tagString, tokenize it and the create list of tags
-						// @TODO refactor into criteria queries
-						List<Tag> tags = new ArrayList<Tag>();
-						logger.info("About to split the string: " + nextLine[3]);
-						//Iterable<String> tagsString = Splitter.on(';').split(nextLine[3]);
-						String[] tagsString = nextLine[3].split(";");
-						logger.info("String splitting has not failed...");
-						for(String tagName : tagsString) {
-							logger.info("Searching for Tag with name: >" + tagName + "<");
-							if(tagName != null && tagName.equals("")) {								
-								tagName = "Default";
-								logger.info("setting tag name to: " + tagName);
-							}
-							Tag tag = tagService.findByTagName(tagName);
-							if(tag == null) {
-								tag = new Tag();
-								tag.setTagName(tagName);								
-								tagService.createTag(tag);
-							}
-							tags.add(tag);
-						}
-						expense.setTags(tags);			
-						expense.setExpenseDate(new SimpleDateFormat("dd/MM/yyyy").parse(nextLine[4]));
-						expenseService.addExpense(expense);
-						logger.info("Expense item created with id: " + expense.getId());
-					}
-					//fileContent = IOUtils.toByteArray(inputStream);
+					BaseCSVParser parser = new BaseCSVParser();
+					expensesToBeAdded = parser.parse(inputStream);
+					expenseService.addAllExpenses(expensesToBeAdded);							
 				}
-			} catch(IOException ioe) {
+			} catch(IOException ioe) {				
 				ioe.printStackTrace();
 			} catch(ParseException pe) {
 				logger.info("Date parsing from csv was not successful");
 				pe.printStackTrace();
 			} finally {
-				
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}				
 			}
 		}
 				

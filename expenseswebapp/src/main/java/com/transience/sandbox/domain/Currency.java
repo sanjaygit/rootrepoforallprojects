@@ -60,4 +60,41 @@ public class Currency implements Serializable {
 		this.expenses = expenses;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((currencyName == null) ? 0 : currencyName.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof Currency)) {
+			return false;
+		}
+		Currency other = (Currency) obj;
+		if (currencyName == null) {
+			if (other.currencyName != null) {
+				return false;
+			}
+		} else if (!currencyName.equals(other.currencyName)) {
+			return false;
+		}
+		return true;
+	}
+
 }
