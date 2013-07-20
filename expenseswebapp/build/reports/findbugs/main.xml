@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="0" timestamp="1374238705247" analysisTimestamp="1374238705393" release="">
+  <Project projectName="">
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\batch\ExpenseCSVRecord.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\batch\ExpenseFieldSetMapper.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\batch\ExpenseItemWriter.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\commandobjects\FileUploadCommand.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\commandobjects\LoginFormCommand.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\controllers\ExpensesBatchUploadController.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\controllers\ExpensesController.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\controllers\UserServicesController.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\converters\StringToCurrencyConverter.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\converters\StringToDateConverter.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\converters\StringToTaggConverter.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\csvimport\BaseCSVParser.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\domain\Currency.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\domain\Expense.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\domain\Role.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\domain\Tag.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\domain\User.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\domain\Vendor.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\repositories\CurrencyRepository.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\repositories\TagRepository.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\serviceimplementations\CurrencyServiceImpl.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\serviceimplementations\ExpenseServiceImplementation.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\serviceimplementations\TagServiceImpl.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\serviceimplementations\UserServiceImpl.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\services\ICurrencyService.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\services\IExpenseService.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\services\ITagService.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\services\IUserService.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\temp\ReflectionExperiment.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\ui\AutoCompleteModel.class</Jar>
+    <Jar>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\build\classes\main\com\transience\sandbox\ui\JSONReponse.class</Jar>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\junit\junit\4.1\jar\73913068c0fecba0ffa1972728482b3b8df0fe94\junit-4.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-webmvc\3.1.0.RELEASE\jar\9a9c88df8825ff3c2ecb79f7ac29ad1e229e6fd6\spring-webmvc-3.1.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.slf4j\slf4j-api\1.7.2\jar\81d61b7f33ebeab314e07de0cc596f8e858d97\slf4j-api-1.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework.data\spring-data-jpa\1.2.0.RELEASE\jar\2981fc41620fc1f4eec6a013347d722f3d13c405\spring-data-jpa-1.2.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.hibernate\hibernate-entitymanager\3.6.8.Final\jar\8f4420d64f23873d3772c77dd64a67c77cadaa31\hibernate-entitymanager-3.6.8.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\javax.servlet\jstl\1.2\jar\74aca283cd4f4b4f3e425f5820cda58f44409547\jstl-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\javax\javaee-web-api\6.0\jar\ebec44255251e6d3b8ddbaf701f732daf0238cbf\javaee-web-api-6.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\net.sf.opencsv\opencsv\2.3\jar\c23708cdb9e80a144db433e23344a788a1fd6599\opencsv-2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\net.sf.supercsv\super-csv\2.1.0\jar\c6466dd0e28c034272b9f70a3f1896c03f1f2b27\super-csv-2.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\commons-fileupload\commons-fileupload\1.3\jar\c89e540e4a12cb034fb973e12135839b5de9a87e\commons-fileupload-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.codehaus.jackson\jackson-core-lgpl\1.3.0\jar\defb8564dd0eef013fef4907914420fac6b0e593\jackson-core-lgpl-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.codehaus.jackson\jackson-mapper-lgpl\1.3.0\jar\c76f4c1714c8264fa6736b49950f7f01450b47e0\jackson-mapper-lgpl-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.codehaus.jackson\jackson-xc\1.3.0\jar\a209b9076e30439dfffaa628563d62737d2149a\jackson-xc-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework.batch\spring-batch-core\2.0.3.RELEASE\jar\ab9fab96247dac685a7eca3e91d1a0aa3b6dd93a\spring-batch-core-2.0.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.hibernate\hibernate-validator\4.1.0.Final\jar\785cceeb0b0dbd03367f45cd60eb26cd48167640\hibernate-validator-4.1.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\javax.validation\validation-api\1.0.0.GA\jar\b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e\validation-api-1.0.0.GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-orm\3.1.2.RELEASE\jar\164975b38b596af2d353b637dbbe39b4167e2c16\spring-orm-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-context\3.1.2.RELEASE\jar\6787712741427c1014aaca503d24e3b3f05f396\spring-context-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-tx\3.1.2.RELEASE\jar\f9efe9e07e73ab593de0353e01b8bcbaafbfd3c1\spring-tx-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\commons-io\commons-io\2.2\jar\83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a\commons-io-2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-jdbc\3.1.2.RELEASE\jar\777639dc0dabe1ec518c9f67571b84fa74c9a83d\spring-jdbc-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\aopalliance\aopalliance\1.0\jar\235ba8b489512805ac13a8f9ea77a1ca5ebe3e8\aopalliance-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\commons-logging\commons-logging\1.1.1\jar\5043bfebc3db072ed80fbd362e7caf00e885d8ae\commons-logging-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-asm\3.1.2.RELEASE\jar\d45753d8048317099395ce7f2bbcdb1776a2e26c\spring-asm-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-core\3.1.2.RELEASE\jar\dd4295f0567deb2cc629dd647d2f055268c2fd3e\spring-core-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-beans\3.1.2.RELEASE\jar\38ff7985f572a87d72023eedce3d720ce1ba4083\spring-beans-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-aop\3.1.2.RELEASE\jar\a68c5ee96d735ac68c00e226e768ef70ae1d5c57\spring-aop-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-expression\3.1.2.RELEASE\jar\c6d4aca58f993bda3cce2bc0536bd168cc9d7ed5\spring-expression-3.1.2.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-context-support\3.1.0.RELEASE\jar\379bb71a6eb9f1a965cd7d6d94524deab2a3da07\spring-context-support-3.1.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework\spring-web\3.1.0.RELEASE\jar\c50458fccc24b87170f6557765c6720a489b5eb2\spring-web-3.1.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework.data\spring-data-commons-core\1.4.0.RELEASE\jar\371ce74afa7c102c134dd472206c45792f9991e0\spring-data-commons-core-1.4.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.slf4j\jcl-over-slf4j\1.6.1\jar\99c61095a14dfc9e47a086068033c286bf236475\jcl-over-slf4j-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.aspectj\aspectjrt\1.6.12\jar\4b430390f227beba9a0e97117f5a23003caafeb3\aspectjrt-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\1.0.1.Final\jar\3306a165afa81938fc3d8a0948e891de9f6b192b\hibernate-jpa-2.0-api-1.0.1.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\antlr\antlr\2.7.6\jar\cf4f67dae5df4f9932ae7810f4548ef3e14dd35e\antlr-2.7.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\commons-collections\commons-collections\3.1\jar\40fb048097caeacdb11dbb33b5755854d89efdeb\commons-collections-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\dom4j\dom4j\1.6.1\jar\5d3ccc056b6f056dbf0dddfdf43894b9065a8f94\dom4j-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.hibernate\hibernate-commons-annotations\3.2.0.Final\jar\ce990611448fc2865469e3b68d2fe76b050e3c4f\hibernate-commons-annotations-3.2.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\javax.transaction\jta\1.1\jar\2ca09f0b36ca7d71b762e14ea2ff09d5eac57558\jta-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.hibernate\hibernate-core\3.6.8.Final\jar\9a84fa0836d25efb04dd4d1ec57e35838968d009\hibernate-core-3.6.8.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\asm\asm\3.1\jar\c157def142714c544bdea2e6144645702adf7097\asm-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\cglib\cglib\2.2\jar\97d03461dc1c04ffc636dcb2579aae7724a78ef2\cglib-2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\javassist\javassist\3.12.0.GA\jar\88b21d1ef06323beff58664cffa62848c033ecd2\javassist-3.12.0.GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.codehaus.jackson\jackson-core-asl\1.3.0\jar\b6b392c0b47cd93569948c20e4eb44eda8cc863a\jackson-core-asl-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.codehaus.jackson\jackson-mapper-asl\1.3.0\jar\739756cf2a525ab6f3ab0b7ea544f4a6b4107d85\jackson-mapper-asl-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.springframework.batch\spring-batch-infrastructure\2.0.3.RELEASE\jar\4f272ca2242d5346379d7f078703ed5aff20b2a0\spring-batch-infrastructure-2.0.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\xpp3\xpp3_min\1.1.4c\jar\19d4e90b43059058f6e056f794f0ea4030d60b86\xpp3_min-1.1.4c.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\com.thoughtworks.xstream\xstream\1.3\jar\3f755b1a46744302712b1b962c4ab64de392f477\xstream-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Sanju\.gradle\caches\artifacts-24\filestore\org.codehaus.jettison\jettison\1.0\jar\32fa94abe525a6c17fae5424fa866b81953429bf\jettison-1.0.jar</AuxClasspathEntry>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\batch\ExpenseCSVRecord.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\batch\ExpenseFieldSetMapper.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\batch\ExpenseItemWriter.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\commandobjects\FileUploadCommand.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\commandobjects\LoginFormCommand.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\controllers\ExpensesBatchUploadController.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\controllers\ExpensesController.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\controllers\UserServicesController.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\converters\StringToCurrencyConverter.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\converters\StringToDateConverter.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\converters\StringToTaggConverter.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\csvimport\BaseCSVParser.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\domain\Currency.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\domain\Expense.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\domain\Role.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\domain\Tag.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\domain\User.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\domain\Vendor.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\repositories\CurrencyRepository.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\repositories\TagRepository.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\serviceimplementations\CurrencyServiceImpl.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\serviceimplementations\ExpenseServiceImplementation.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\serviceimplementations\TagServiceImpl.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\serviceimplementations\UserServiceImpl.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\services\ICurrencyService.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\services\IExpenseService.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\services\ITagService.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\services\IUserService.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\temp\ReflectionExperiment.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\ui\AutoCompleteModel.java</SrcDir>
+    <SrcDir>D:\DATA\GIT-Repositories\rootrepoforallGITProjects\expenseswebapp\src\main\java\com\transience\sandbox\ui\JSONReponse.java</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="com.transience.sandbox.controllers.ExpensesController">
+      <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="52" end="153" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.controllers.ExpensesController" name="uploadExpenseFile" signature="(Ljavax/servlet/http/HttpServletRequest;Lcom/transience/sandbox/commandobjects/FileUploadCommand;Lorg/springframework/ui/Model;)Lorg/springframework/web/servlet/ModelAndView;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="117" end="153" startBytecode="0" endBytecode="109" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    </Method>
+    <LocalVariable name="expensesToBeAdded" register="5" pc="91" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="125" end="125" startBytecode="89" endBytecode="89" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="expensesToBeAdded"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_GUARANTEED_DEREF" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="com.transience.sandbox.controllers.ExpensesController">
+      <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="52" end="153" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.controllers.ExpensesController" name="uploadExpenseFile" signature="(Ljavax/servlet/http/HttpServletRequest;Lcom/transience/sandbox/commandobjects/FileUploadCommand;Lorg/springframework/ui/Model;)Lorg/springframework/web/servlet/ModelAndView;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="117" end="153" startBytecode="0" endBytecode="715" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    </Method>
+    <LocalVariable name="inputStream" register="6" pc="159" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="144" end="144" startBytecode="242" endBytecode="242" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="144" end="144" startBytecode="161" endBytecode="161" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="129" end="129" startBytecode="105" endBytecode="105" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="130" end="130" startBytecode="108" endBytecode="108" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_GUARANTEED_DEREF_ON_EXCEPTION_PATH" priority="2" abbrev="NP" category="CORRECTNESS">
+    <Class classname="com.transience.sandbox.controllers.ExpensesController">
+      <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="52" end="153" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.controllers.ExpensesController" name="uploadExpenseFile" signature="(Ljavax/servlet/http/HttpServletRequest;Lcom/transience/sandbox/commandobjects/FileUploadCommand;Lorg/springframework/ui/Model;)Lorg/springframework/web/servlet/ModelAndView;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="117" end="153" startBytecode="0" endBytecode="715" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java"/>
+    </Method>
+    <LocalVariable name="inputStream" register="6" pc="94" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="144" end="144" startBytecode="242" endBytecode="242" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="144" end="144" startBytecode="186" endBytecode="186" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="126" end="126" startBytecode="91" endBytecode="91" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.transience.sandbox.controllers.ExpensesController" start="128" end="128" startBytecode="96" endBytecode="96" sourcefile="ExpensesController.java" sourcepath="com/transience/sandbox/controllers/ExpensesController.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.transience.sandbox.csvimport.BaseCSVParser">
+      <SourceLine classname="com.transience.sandbox.csvimport.BaseCSVParser" start="28" end="132" sourcefile="BaseCSVParser.java" sourcepath="com/transience/sandbox/csvimport/BaseCSVParser.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.csvimport.BaseCSVParser" name="parse" signature="(Ljava/io/InputStream;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.csvimport.BaseCSVParser" start="48" end="92" startBytecode="0" endBytecode="920" sourcefile="BaseCSVParser.java" sourcepath="com/transience/sandbox/csvimport/BaseCSVParser.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="com.transience.sandbox.csvimport.BaseCSVParser" start="51" end="51" startBytecode="11" endBytecode="11" sourcefile="BaseCSVParser.java" sourcepath="com/transience/sandbox/csvimport/BaseCSVParser.java"/>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="1" abbrev="NP" category="CORRECTNESS">
+    <Class classname="com.transience.sandbox.csvimport.BaseCSVParser">
+      <SourceLine classname="com.transience.sandbox.csvimport.BaseCSVParser" start="28" end="132" sourcefile="BaseCSVParser.java" sourcepath="com/transience/sandbox/csvimport/BaseCSVParser.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.csvimport.BaseCSVParser" name="parse" signature="(Ljava/io/InputStream;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.csvimport.BaseCSVParser" start="48" end="92" startBytecode="0" endBytecode="920" sourcefile="BaseCSVParser.java" sourcepath="com/transience/sandbox/csvimport/BaseCSVParser.java"/>
+    </Method>
+    <LocalVariable name="mappedExpenses" register="2" pc="545" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.transience.sandbox.csvimport.BaseCSVParser" start="84" end="84" startBytecode="547" endBytecode="547" sourcefile="BaseCSVParser.java" sourcepath="com/transience/sandbox/csvimport/BaseCSVParser.java" role="SOURCE_LINE_DEREF"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="com.transience.sandbox.domain.Expense">
+      <SourceLine classname="com.transience.sandbox.domain.Expense" start="60" end="178" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.domain.Expense" name="getExpenseDate" signature="()Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.domain.Expense" start="88" end="88" startBytecode="0" endBytecode="46" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+    </Method>
+    <Field classname="com.transience.sandbox.domain.Expense" name="expenseDate" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.domain.Expense" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+    </Field>
+    <SourceLine classname="com.transience.sandbox.domain.Expense" start="88" end="88" startBytecode="4" endBytecode="4" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="com.transience.sandbox.domain.Expense">
+      <SourceLine classname="com.transience.sandbox.domain.Expense" start="60" end="178" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.domain.Expense" name="setExpenseDate" signature="(Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.domain.Expense" start="92" end="93" startBytecode="0" endBytecode="61" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+    </Method>
+    <Field classname="com.transience.sandbox.domain.Expense" name="expenseDate" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.domain.Expense" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+    </Field>
+    <LocalVariable name="expenseDate" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.transience.sandbox.domain.Expense" start="92" end="92" startBytecode="2" endBytecode="2" sourcefile="Expense.java" sourcepath="com/transience/sandbox/domain/Expense.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE">
+    <Class classname="com.transience.sandbox.temp.ReflectionExperiment">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="31" end="117" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.temp.ReflectionExperiment" name="getMappedEntities" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="79" end="92" startBytecode="0" endBytecode="79" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Method>
+    <LocalVariable name="firstLine" register="5" pc="46" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="81" end="81" startBytecode="44" endBytecode="44" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="firstLine"/>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" abbrev="DMI" category="STYLE">
+    <Class classname="com.transience.sandbox.temp.ReflectionExperiment">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="31" end="117" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.temp.ReflectionExperiment" name="getHeaderLine" signature="(Ljava/lang/String;)[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="70" end="75" startBytecode="0" endBytecode="27" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Method>
+    <String value="D:/CBA.csv" role="FILE_NAME"/>
+    <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="70" end="70" startBytecode="10" endBytecode="10" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" abbrev="DMI" category="STYLE">
+    <Class classname="com.transience.sandbox.temp.ReflectionExperiment">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="31" end="117" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.temp.ReflectionExperiment" name="getMappedEntities" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="79" end="92" startBytecode="0" endBytecode="79" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Method>
+    <String value="D:/CBA.csv" role="FILE_NAME"/>
+    <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="79" end="79" startBytecode="10" endBytecode="10" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.transience.sandbox.temp.ReflectionExperiment">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="31" end="117" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.temp.ReflectionExperiment" name="getHeaderLine" signature="(Ljava/lang/String;)[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="70" end="75" startBytecode="0" endBytecode="156" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="71" end="71" startBytecode="26" endBytecode="26" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N">
+    <Class classname="com.transience.sandbox.temp.ReflectionExperiment">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="31" end="117" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Class>
+    <Method classname="com.transience.sandbox.temp.ReflectionExperiment" name="getMappedEntities" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="79" end="92" startBytecode="0" endBytecode="370" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="com.transience.sandbox.temp.ReflectionExperiment" start="80" end="80" startBytecode="26" endBytecode="26" sourcefile="ReflectionExperiment.java" sourcepath="com/transience/sandbox/temp/ReflectionExperiment.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>javax.annotation.Nonnull</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 19 Jul 2013 22:58:25 +1000" total_classes="31" referenced_classes="121" total_bugs="12" total_size="687" num_packages="11" vm_version="21.0-b17" cpu_seconds="14.80" clock_seconds="5.22" peak_mbytes="174.20" alloc_mbytes="1808.00" gc_seconds="0.05" priority_2="8" priority_1="4">
+    <PackageStats package="com.transience.sandbox.batch" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="com.transience.sandbox.batch.ExpenseCSVRecord" sourceFile="ExpenseCSVRecord.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.batch.ExpenseFieldSetMapper" sourceFile="ExpenseFieldSetMapper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.batch.ExpenseItemWriter" sourceFile="ExpenseItemWriter.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.commandobjects" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="com.transience.sandbox.commandobjects.FileUploadCommand" sourceFile="FileUploadCommand.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.commandobjects.LoginFormCommand" sourceFile="LoginFormCommand.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.controllers" total_bugs="3" total_types="3" total_size="95" priority_2="3">
+      <ClassStats class="com.transience.sandbox.controllers.ExpensesBatchUploadController" sourceFile="ExpensesBatchUploadController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.controllers.ExpensesController" sourceFile="ExpensesController.java" interface="false" size="68" bugs="3" priority_2="3"/>
+      <ClassStats class="com.transience.sandbox.controllers.UserServicesController" sourceFile="UserServicesController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.converters" total_bugs="0" total_types="3" total_size="35">
+      <ClassStats class="com.transience.sandbox.converters.StringToCurrencyConverter" sourceFile="StringToCurrencyConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.converters.StringToDateConverter" sourceFile="StringToDateConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.converters.StringToTaggConverter" sourceFile="StringToTaggConverter.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.csvimport" total_bugs="2" total_types="1" total_size="64" priority_1="2">
+      <ClassStats class="com.transience.sandbox.csvimport.BaseCSVParser" sourceFile="BaseCSVParser.java" interface="false" size="64" bugs="2" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.domain" total_bugs="2" total_types="6" total_size="242" priority_2="2">
+      <ClassStats class="com.transience.sandbox.domain.Currency" sourceFile="Currency.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.domain.Expense" sourceFile="Expense.java" interface="false" size="84" bugs="2" priority_2="2"/>
+      <ClassStats class="com.transience.sandbox.domain.Role" sourceFile="Role.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.domain.Tag" sourceFile="Tag.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.domain.User" sourceFile="User.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.domain.Vendor" sourceFile="Vendor.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.repositories" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="com.transience.sandbox.repositories.CurrencyRepository" sourceFile="CurrencyRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.repositories.TagRepository" sourceFile="TagRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.serviceimplementations" total_bugs="0" total_types="4" total_size="70">
+      <ClassStats class="com.transience.sandbox.serviceimplementations.CurrencyServiceImpl" sourceFile="CurrencyServiceImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.serviceimplementations.ExpenseServiceImplementation" sourceFile="ExpenseServiceImplementation.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.serviceimplementations.TagServiceImpl" sourceFile="TagServiceImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.serviceimplementations.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.services" total_bugs="0" total_types="4" total_size="14">
+      <ClassStats class="com.transience.sandbox.services.ICurrencyService" sourceFile="ICurrencyService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.services.IExpenseService" sourceFile="IExpenseService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.services.ITagService" sourceFile="ITagService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.services.IUserService" sourceFile="IUserService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.temp" total_bugs="5" total_types="1" total_size="55" priority_2="3" priority_1="2">
+      <ClassStats class="com.transience.sandbox.temp.ReflectionExperiment" sourceFile="ReflectionExperiment.java" interface="false" size="55" bugs="5" priority_2="3" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="com.transience.sandbox.ui" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="com.transience.sandbox.ui.AutoCompleteModel" sourceFile="AutoCompleteModel.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.transience.sandbox.ui.JSONReponse" sourceFile="JSONReponse.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="506" invocations="668" avgMicrosecondsPerInvocation="757" maxMicrosecondsPerInvocation="30475" standardDeviationMircosecondsPerInvocation="1974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="416" invocations="121" avgMicrosecondsPerInvocation="3443" maxMicrosecondsPerInvocation="49224" standardDeviationMircosecondsPerInvocation="7819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="356" invocations="121" avgMicrosecondsPerInvocation="2947" maxMicrosecondsPerInvocation="53606" standardDeviationMircosecondsPerInvocation="7191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="223" invocations="670" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="51705" standardDeviationMircosecondsPerInvocation="2387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="201" invocations="121" avgMicrosecondsPerInvocation="1662" maxMicrosecondsPerInvocation="41188" standardDeviationMircosecondsPerInvocation="4693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="172" invocations="144" avgMicrosecondsPerInvocation="1196" maxMicrosecondsPerInvocation="37010" standardDeviationMircosecondsPerInvocation="3400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="162" invocations="144" avgMicrosecondsPerInvocation="1126" maxMicrosecondsPerInvocation="34196" standardDeviationMircosecondsPerInvocation="3173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="148" invocations="140" avgMicrosecondsPerInvocation="1058" maxMicrosecondsPerInvocation="27119" standardDeviationMircosecondsPerInvocation="2612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="144" invocations="308" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="11595" standardDeviationMircosecondsPerInvocation="899"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="142" invocations="147" avgMicrosecondsPerInvocation="969" maxMicrosecondsPerInvocation="36633" standardDeviationMircosecondsPerInvocation="3244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="139" invocations="147" avgMicrosecondsPerInvocation="951" maxMicrosecondsPerInvocation="22955" standardDeviationMircosecondsPerInvocation="2343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="115" invocations="121" avgMicrosecondsPerInvocation="953" maxMicrosecondsPerInvocation="18872" standardDeviationMircosecondsPerInvocation="2068"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="106" invocations="121" avgMicrosecondsPerInvocation="882" maxMicrosecondsPerInvocation="21138" standardDeviationMircosecondsPerInvocation="2633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="92" invocations="144" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="13629" standardDeviationMircosecondsPerInvocation="1508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="88" invocations="167" avgMicrosecondsPerInvocation="528" maxMicrosecondsPerInvocation="17154" standardDeviationMircosecondsPerInvocation="1511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="81" invocations="60" avgMicrosecondsPerInvocation="1353" maxMicrosecondsPerInvocation="59720" standardDeviationMircosecondsPerInvocation="7601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="77" invocations="656" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="2757" standardDeviationMircosecondsPerInvocation="253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="75" invocations="66" avgMicrosecondsPerInvocation="1146" maxMicrosecondsPerInvocation="17727" standardDeviationMircosecondsPerInvocation="2277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="72" invocations="121" avgMicrosecondsPerInvocation="602" maxMicrosecondsPerInvocation="10246" standardDeviationMircosecondsPerInvocation="1334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="67" invocations="121" avgMicrosecondsPerInvocation="555" maxMicrosecondsPerInvocation="8987" standardDeviationMircosecondsPerInvocation="1434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="66" invocations="156" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="50007" standardDeviationMircosecondsPerInvocation="3984"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

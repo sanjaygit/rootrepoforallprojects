@@ -12,6 +12,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Add Expense</title>
+	
 	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -21,9 +22,9 @@
 	<link rel="stylesheet" type="text/css" href="${contextPath}/static_resources/css/common.css" />
 	
 	<!-- include highcharts after jQuery -->
- 	<script src="http://code.highcharts.com/highcharts.js"></script>
+
  	<script type="text/javascript">
- 	
+	
  			var options = {
  					chart: {
  						renderTo: 'chartContainer',
@@ -101,7 +102,7 @@
 		<link rel="stylesheet" type="text/css" href="${contextPath}/static_resources/loopj-jquery-tokeninput/token-input.css" />
 		<link rel="stylesheet" type="text/css" href="${contextPath}/static_resources/loopj-jquery-tokeninput/token-input-facebook.css" />
 	<!-- End loopj.com autocomplete -->
-	
+
 	 <script>
 		$(function() {
 			$( "#expenseDate_formfield" ).datepicker(
@@ -268,5 +269,7 @@
 		</table>
 	</form:form>
 </div>
+
+
 </body>
 </html>

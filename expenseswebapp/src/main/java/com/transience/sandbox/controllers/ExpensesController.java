@@ -8,7 +8,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -43,6 +45,8 @@ import com.transience.sandbox.csvimport.BaseCSVParser;
 import com.transience.sandbox.domain.Currency;
 import com.transience.sandbox.domain.Expense;
 import com.transience.sandbox.domain.Tag;
+import com.transience.sandbox.dtos.ExpenseDTO;
+import com.transience.sandbox.dtos.ExpenseGridJSONMessage;
 import com.transience.sandbox.services.*;
 import com.transience.sandbox.ui.AutoCompleteModel;
 
@@ -60,7 +64,19 @@ public class ExpensesController {
 	@Autowired
 	ITagService tagService;
 	
-
+	@RequestMapping(value="/showAllExpensesGrid", method=RequestMethod.GET)
+	public ModelAndView showAllExpensesGrid() {
+		logger.info("* * *getAllExpensesGrid method called");
+		ModelAndView mav = new ModelAndView("all_expenses_grid");
+		return mav;    
+	}	
+	
+	@RequestMapping(value="ftl") 
+	public String getFTL() {
+		return "index";
+	}
+	
+	
 	@RequestMapping(value="getAllTagNamesJSON", method=RequestMethod.GET)
 	public @ResponseBody List<AutoCompleteModel> getAllTagNamesJSON(@RequestParam("q") String term) {
 		Collection<Tag> tags = tagService.findTagsWithNameLike(term);
@@ -74,6 +90,20 @@ public class ExpensesController {
 		
 		return tagNames;
 	}
+	
+	@RequestMapping(value="getAllExpensesJSON", method=RequestMethod.GET, produces="application/json")
+	public @ResponseBody ExpenseGridJSONMessage getAllExpensesJSON() {
+		logger.info("Received json request...");
+		List<ExpenseDTO> allExpensesList = expenseService.getAllExpenses();
+		
+		ExpenseGridJSONMessage json = new ExpenseGridJSONMessage();
+		json.setRows(allExpensesList);
+		json.setPage("1");
+		json.setRecords(String.valueOf(allExpensesList.size()));
+		json.setTotal("10");
+		return json;
+	}
+	
 	
 	@RequestMapping(value = "testConverters", method = RequestMethod.GET)
 	public ModelAndView testConverters(@RequestParam Currency currency, @RequestParam java.util.Date date, @RequestParam List<Tag> tags) {		
